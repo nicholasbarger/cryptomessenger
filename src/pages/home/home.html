@@ -1,9 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>CryptoMarket</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <app-message *ngFor="let message of messages"></app-message>
+  <app-message [message]="message" *ngFor="let message of messages"></app-message>
 </ion-content>

@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import { Message } from '../../models/message';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-messages',
+  templateUrl: 'messages.html'
 })
-export class HomePage {
+export class MessagesPage {
 
   messages: Array<Message>;
   
@@ -14,7 +14,8 @@ export class HomePage {
     this.messages = new Array<Message>(
       new Message('hey, whats up?', 'me'),
       new Message('working on my project.', 'mj'),
-      new Message('cool', 'me')
+      new Message('cool', 'me'),
+      new Message('when will it be ready?', 'mj')
     );
   }
 

@@ -1,11 +1,20 @@
-.message {
-    padding: 15px;
-    background-color: lightblue;
-    border-radius: 5px;
-    display: block;
+.message-container {
     margin-top: 10px;
     margin-bottom: 10px;
+    
+    .message {
+        padding: 15px;
+        background-color: lightblue;
+        border-radius: 5px;
+        display: block;
+        display: inline-block;
+    }
 }
+
 .me {
-    background-color: lightgreen;
+    text-align: right;
+    
+    .message {
+        background-color: lightgreen;
+    }
 }

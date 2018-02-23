@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 import { ComponentsModule } from '../components/components.module';
 
 import { AboutPage } from '../pages/about/about';
-import { HomePage } from '../pages/home/home';
+import { MessagesPage } from '../pages/messages/messages';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,7 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AboutPage,
-    HomePage,
+    MessagesPage,
     TabsPage
   ],
   imports: [
@@ -28,7 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     AboutPage,
-    HomePage,
+    MessagesPage,
     TabsPage
   ],
   providers: [

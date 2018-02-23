@@ -10,7 +10,8 @@
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "start": "ionic serve"
+    "start": "ionic serve",
+    "start-cloud": "ionic serve -p $PORT --no-livereload"
   },
   "dependencies": {
     "@angular/common": "5.0.3",

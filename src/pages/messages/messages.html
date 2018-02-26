@@ -1,9 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Messages</ion-title>
+    <ion-title>
+      <span *ngIf="!isChannelEdit">#{{ channel }}</span>
+      <ion-input *ngIf="isChannelEdit" type="text" name="channel" [(ngModel)]="channel"></ion-input>
+      <ion-icon name="chatboxes" float-right (click)="changeChannel()"></ion-icon>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <app-message [message]="message" *ngFor="let message of messages"></app-message>
+  <div class="messages">
+    <app-message [message]="message" *ngFor="let message of messages"></app-message>
+  </div>
+  
+  <form name="newMessageForm" (submit)="sendMessage()">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-input type="text" id="newMessage" name="newMessage" placeholder="Message" [(ngModel)]="newMessage"></ion-input>      
+        </ion-col>
+        <ion-col col-2>
+          <button type="submit" ion-button clear color="primary" [disabled]="message === ''">Send</button>
+        </ion-col>
+      </ion-row>  
+    </ion-grid>
+  </form>
 </ion-content>
